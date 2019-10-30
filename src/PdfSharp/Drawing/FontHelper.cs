@@ -169,7 +169,8 @@ namespace PdfSharp.Drawing
             //typeface = s_typefaces[0];
 
             // BUG: does not work with fonts that have others than the four default styles
-            FormattedText formattedText = new FormattedText(text, new CultureInfo("en-us"), FlowDirection.LeftToRight, typeface, emSize, brush);
+            //FormattedText formattedText = new FormattedText(text, new CultureInfo("en-us"), FlowDirection.LeftToRight, typeface, emSize, brush);
+            var formattedText  = new FormattedText(text, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, typeface, emSize, brush, VisualTreeHelper.GetDpi().PixelsPerDip);
             // .NET 4.0 feature new NumberSubstitution(), TextFormattingMode.Display);
             //formattedText.SetFontWeight(FontWeights.Bold);
             //formattedText.SetFontStyle(FontStyles.Oblique);

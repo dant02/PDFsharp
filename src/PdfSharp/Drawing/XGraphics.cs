@@ -3588,7 +3588,7 @@ namespace PdfSharp.Drawing  // #??? Clean up
                     if (font.WpfTypeface.FontFamily.Source == "Segoe UI Light")
                         GetType();
 #endif
-                    FormattedText formattedText = FontHelper.CreateFormattedText(text, font.WpfTypeface, font.Size, brush.RealizeWpfBrush());
+                    FormattedText formattedText = FontHelper.CreateFormattedText(this, text, font.WpfTypeface, font.Size, brush.RealizeWpfBrush());
 
                     //formattedText.SetTextDecorations(TextDecorations.OverLine);
                     switch (format.Alignment)

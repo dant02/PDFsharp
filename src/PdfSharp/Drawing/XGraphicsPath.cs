@@ -1685,7 +1685,7 @@ namespace PdfSharp.Drawing
                 double cyDescent = lineSpace * font.CellDescent / font.CellSpace;
 
                 Typeface typeface = FontHelper.CreateTypeface(family.WpfFamily, style);
-                FormattedText formattedText = FontHelper.CreateFormattedText(s, typeface, emSize, WpfBrushes.Black);
+                FormattedText formattedText = FontHelper.CreateFormattedText(this, s, typeface, emSize, WpfBrushes.Black);
 
                 switch (format.Alignment)
                 {
@@ -1885,7 +1885,7 @@ namespace PdfSharp.Drawing
 
             Typeface typeface = FontHelper.CreateTypeface(family.WpfFamily, style);
             //FormattedText formattedText = new FormattedText(s, CultureInfo.CurrentCulture, FlowDirection.LeftToRight, typeface, emSize, WpfBrushes.Black);
-            FormattedText formattedText = FontHelper.CreateFormattedText(s, typeface, emSize, WpfBrushes.Black);
+            FormattedText formattedText = FontHelper.CreateFormattedText(this, s, typeface, emSize, WpfBrushes.Black);
 
             switch (format.Alignment)
             {
